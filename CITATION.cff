@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Cite the tagged version you read; the text is revised between tags."
+title: "house-skills: data journalism and data storytelling method for coding agents"
+type: software
+authors:
+  - name: "Polymer Industry Cluster, Greater Akron Chamber"
+  - family-names: Swanson
+    given-names: John
+license: CC-BY-4.0
+repository-code: "https://github.com/polymerindustrycluster/house-skills"
+url: "https://polymerindustrycluster.github.io/evidence-room/"
