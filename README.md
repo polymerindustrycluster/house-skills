@@ -54,6 +54,13 @@ corrected since, say so and we will update the example.
 
 ## Licence
 
-[CC BY 4.0](LICENSE). Attribute to the Polymer Industry Cluster, Greater Akron Chamber.
-The Duarte material is paraphrase with page citations to the books named in the file;
-the books remain their author's.
+[CC BY-SA 4.0](LICENSE). Attribute to the Polymer Industry Cluster, Greater Akron
+Chamber, and share adaptations under the same licence.
+
+Share-alike rather than plain attribution because one section is a derivative of a
+share-alike work: the AI-tell categories in `data-journalism-house/references/style-bans.md`
+are adapted from Wikipedia's "Signs of AI writing" (WikiProject AI Cleanup, CC BY-SA 4.0),
+and the file says so where the material appears. The Duarte material in the storytelling
+skill is paraphrase with page citations to the books named in the file; the books remain
+their author's. Outlet names (The Upshot, The Pudding, FiveThirtyEight, Datawrapper) are
+cited as reference points for practice, not reproduced.

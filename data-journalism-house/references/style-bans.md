@@ -73,6 +73,13 @@ data sources: X, Y, Z").
 
 ## AI-tell patterns (distilled from Wikipedia's "Signs of AI writing")
 
+Attribution and licence: the fifteen categories and their example phrases below are
+adapted from Wikipedia, "Signs of AI writing", WikiProject AI Cleanup,
+https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing, by its contributors, licensed
+CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). The category order and the
+sample phrases are theirs; the "Fix:" lines and the data-journalism readings are ours.
+This section is therefore also CC BY-SA 4.0, and any file that carries it must be.
+
 ### 1. Puffery / importance inflation
 Formulaic claims that a subject matters, without evidence that it does. Grep: "stands as
 a testament", "plays a vital/pivotal/key role", "underscores its importance", "reflects
