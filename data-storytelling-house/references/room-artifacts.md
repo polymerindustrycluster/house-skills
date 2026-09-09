@@ -3,7 +3,7 @@
 The artifacts this skill produces, with the house-tested form of each. Every one is a
 ROOM artifact: it cites the evidence lane and never substitutes for it.
 
-## Talk outline (the working file)
+## Talk outline (the working file; pitch/ask default)
 
 One file per talk, top to bottom:
 
@@ -35,6 +35,15 @@ SOURCES: <evidence pages / claim files each number traces to>
 
 The `IS`/`COULD` marks are not decoration — they are the sparkline audit. Three of the
 same mark in a row = restructure before writing a single slide.
+
+Use SKILL.md's declared-room-shape substitutions for other rooms. For a scientific
+review, replace the persuasion beats with QUESTION / EVIDENCE / MATERIAL METHODS /
+LIMITS / JUDGMENT OR NEXT TEST. For a scientific lesson, use a learning objective
+and the guided explanation from [scientific explanation](scientific-explanation.md).
+Neither needs a manufactured STAR, bliss, or three memorable numbers. Put the
+planned comprehension question and answer criteria in the working file, separate
+from the listener-facing script. Add a common claim/source reference when creating
+audience variants; do not create another authoritative evidence store.
 
 ## Beat library / menu (a versioned setlist source, not a talk)
 
@@ -95,6 +104,27 @@ victory lap. Rules learned building them:
   traceability audit (review-gates Layer 2) treats a ROOM-SCALED line as guarded, not
   drifted.
 
+### Scientific extension (when the beat explains or evaluates science)
+
+Keep SAY and IF ASKED; retain NUMBER GUARD when there is a numeric claim. Add only
+what the scientific task needs:
+
+```
+CLAIM/SOURCE: <existing verified claim identifier, version and locator>
+UNDERSTANDING: <relationship or judgment the listener must be able to explain/use>
+ESSENTIAL LIMIT: <condition that changes the conclusion; where it is spoken/shown>
+ANALOGY: <correspondence and where it fails, only if an analogy is used>
+CHECK: <new-case or evidence-judgment question asked after unprompted takeaways>
+ANSWER CRITERIA: <supported relationship, boundary and application; withheld from listener>
+```
+
+For a concept without numbers, CLAIM/SOURCE replaces NUMBER GUARD; do not invent
+numbers. These are working-card fields, not new required Typst function arguments.
+Use Markdown for this extended card unless an existing template supports the fields.
+Retain the complete card beside the presentation, with any material qualification
+also in the actual room artifact. Score recall and understanding separately under
+review-gates Layer 3. An AI-only rehearsal cannot certify a human learning outcome.
+
 ## One-page ask (funder / board)
 
 Duarte's one-page Recommendation Tree (*DataStory* Appendix), house-adapted. Top band =
@@ -108,10 +138,12 @@ turning anything over; detail rides behind a link to the evidence lane, never in
 an ask that tries to also be the evidence does both jobs badly (the slideument
 failure, in print).
 
-Duarte's required contents that a polite draft always omits (*DataStory* Ch. V): the
-**notable objections stated and rebutted in the artifact** (readers who don't see
-their objection assume you missed it), the **abandoned alternative and why** you
-rejected it, and every prediction's assumptions in the form **"This is true if…"**.
+Apply Duarte's objection, alternative, and assumption guidance (*DataStory* Ch. V):
+state **notable objections in the artifact**, answer them where evidence supports
+an answer, and otherwise retain them as limitations. An unresolved limitation may
+occupy an existing response/rebuttal field; do not invent a refutation. Include the
+**abandoned alternative and why** it was rejected, and every prediction's assumptions
+in the form **"This is true if…"**.
 When an objection or alternative is genuinely confidential (a negotiation position,
 a personnel matter), the one-pager carries the concise disclosure ("two alternatives
 were evaluated and rejected on cost; detail available") and the controlled backup

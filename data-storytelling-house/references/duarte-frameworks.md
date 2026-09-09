@@ -49,7 +49,12 @@ questioning. **The six executive levers in three categories** (DS Ch.II figure �
 book's prose says six in one place and three in another; the figure resolves it:
 three categories, each with an up and a down): MONEY (revenue/profit ↑, costs ↓),
 MARKET (share ↑, time-to-market ↓), EXPOSURE (retention ↑, risk ↓). A recommendation
-bound for an executive desk must visibly move one.
+in Duarte's business context is connected to these measures. **House scope:** check
+the actual decision and success criteria for this room; scientific review, public
+value, or a funder FYI need not become a revenue or market claim. Some executives
+prefer detailed reports; verify their preferred medium and depth (DS Ch.II,
+"Understand How Executives Consume Information"). The 15-of-30 timing guidance is
+for an interruption-driven executive meeting, not every scientific talk.
 
 ## 2. Big Idea → DataPOV
 
@@ -156,11 +161,15 @@ bare ones (DS Ch.X workshop). Heath's Stanford version: 5% remembered a statisti
 
 ## 7. Charts, observations, annotation
 
-**Explain with bar, pie, or line only** (DS Ch.VI) — "for gaining buy-in, clarity
-always outperforms cool." Two named risks of complex charts: the insight gets buried,
+**Choose the simplest familiar chart that preserves the evidence** (DS Ch.VI).
+Duarte says the choice is *usually* a bar, pie, or line chart and allows complex
+forms familiar to the audience's field: "for gaining buy-in, clarity always
+outperforms cool." Two named risks of complex charts: the insight gets buried,
 and complex visualizations "look so authoritative that they lead people to suspend
-their judgment" — do not look more certain than you are. (Exception: a complex form
-that is genuinely your industry's vernacular.)
+their judgment" — do not look more certain than you are. **House application:**
+retain necessary uncertainty displays and scientific relationships; teach an
+unfamiliar representation when replacing it would lose meaning. Chart construction
+remains with `pic-charts`.
 
 **Title vs. observation — Duarte's split** (DS Ch.VI): the CHART TITLE is neutral and
 factual — the measured noun, precisely, and the when; units on the axis ("2019
@@ -169,7 +178,11 @@ separate **observation** placed above the title, as the slide title, or as a sub
 Framing an observation is a choice among true statements, and it tells the reader
 what to focus on. **House mapping:** this is the evidence-room split — claim in
 `.fig-title` position, neutral measurement line in the sub — carried into slides: the
-observation takes the slide-title slot; the chart keeps its neutral title beneath.
+observation takes the slide-title slot on completed assertion slides; retain the
+chart's existing title and neutral measurement context. **Alley exception:** a
+declared question/evidence/reveal sequence may defer the observation until the
+supported conclusion and limits emerge. Preserve material qualifiers throughout;
+this sequencing exception does not authorize stripping an existing figure title.
 
 **Grammar-matched observations** (DS Ch.VI): bar/component charts take ADJECTIVES
 (largest/smallest, majority/minority); line charts take VERBS + ADVERBS ("a trend
@@ -228,9 +241,11 @@ headlines (p.163). Rhetorical devices: anaphora, mesodiplosis, epistrophe (pp.15
 
 Verb modalities: **Change / Continue / Finish** (DS Ch.III). **Performance verbs**
 (move a KPI, continuous: capture, disrupt, grow, reduce, shift…) vs. **process verbs**
-(complete-or-not: build, conduct, implement, evaluate…). **Escalation rule: if an
-executive approves it, lead with a performance verb** — process verbs nest beneath as
-sub-actions (DISRUPT → research/develop/invest). Either can be strategic at scale
+(complete-or-not: build, conduct, implement, evaluate…). **For an executive business
+recommendation with supported outcome stakes, lead with a performance verb**;
+process verbs nest beneath as sub-actions (DISRUPT → research/develop/invest).
+Otherwise name the actual decision, such as authorizing replication, without
+inventing a business outcome. Either verb type can be strategic at scale
 ("build a plant in Illinois to save $6M/yr"). Grammar system for data prose: nouns =
 what you measure (say precisely which noun, how, when); adjectives describe static
 (bar/component) data; adverbs describe trend lines; conjunctions (but/and/so) drive
@@ -279,11 +294,17 @@ relationship, not by what looks impressive.
 From DS Ch.V — these are REQUIRED CONTENTS of the deliverable, not private prep:
 - **Notable objections, in the artifact**: "If you don't thoughtfully present
   alternative perspectives, your audience is likely to think you failed to consider
-  them." State the counterargument, then rebut it explicitly.
+  them." Test disconfirming cases and acknowledge unknown answers. Duarte's
+  recommendation framing proceeds to rebuttal. **House safeguard:** rebut only
+  when the evidence supports it; otherwise narrow, revise, or withdraw the
+  recommendation. A scientific review can leave the objection unresolved.
 - **The abandoned alternatives and why** — executives interrupt partly because they
   suspect a different direction; show you explored it and why you rejected it.
-- **Assumptions as "This is true if…"** — every prediction names its run-rate,
-  economic, hiring, and competitor assumptions in that form, each defensible.
+- **Assumptions as "This is true if…"** — Duarte is discussing business assumptions;
+  run-rate, economic, hiring, supply, and competitor conditions are examples, not a
+  compulsory list for every forecast. **House scientific extension:** retain
+  material sampling, measurement, modeling, and test-condition assumptions too;
+  the book's business framing is not a scientific-validity checklist.
 - Probe your own cause story with a repeated "…but why?" before trusting it (her
   root-cause move; the formal "five whys" count is Toyota's, not hers); don't
   over-pile the WHY evidence.
@@ -333,3 +354,21 @@ influence — and the room must always be able to check.
   "They didn't come to your presentation to see you").
 - A numeric share of time Jobs spends in each sparkline state.
 - "Chartjunk" in DataStory (it appears in slide:ology p.74, credited to Tufte).
+
+## 15. NAS source recheck, 2026-09-08
+
+The held *DataStory* EPUB (Nancy Duarte, IdeaPress, 2019) was checked against the
+NAS original and passed ZIP integrity verification. Selective sections reread:
+Ch.II, "Know Your Decision-Maker," "Know How Executives Are Measured,"
+"Understand How Executives Consume Information," and "Expect Questions and
+Interruptions" (`OPS/text/ch16.html`, `ch18.html`, `ch19.html`, `ch20_split_0.html`);
+Ch.V, "Be Your Own Skeptic" and "Include Assumptions by Stating ‘This Is True If…’"
+(`ch38.html`, `ch39.html`); Ch.VI, "Choose Charts Everyone Understands"
+(`ch43_split_0.html`). These locators support the qualifications above; they do not
+claim a fresh audit of every older page citation or figure in this reference.
+
+For Windows retrieval use the source-book location in
+[scientific explanation](scientific-explanation.md#sources-and-scope). The NAS
+canonical directory uses symbolic links that returned empty reads through the
+mapped drive; the actual source files were readable. Do not package the books or
+their full extracted text with this skill.

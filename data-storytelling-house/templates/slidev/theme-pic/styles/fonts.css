@@ -1,0 +1,20 @@
+/* ============================================================
+   fonts.css — the brand typeface for the house Slidev theme.
+
+   This is the shipped stub. It declares no @font-face, so the
+   theme falls back through the stacks in tokens.css (--font-sans,
+   --font-display) to system-ui. Your brand pack replaces this
+   file: put your licensed font files in a folder beside this one
+   and declare them here, for example
+
+   @font-face { font-family: "Your Sans"; font-weight: 400; font-style: normal;
+                font-display: block; src: url("../fonts/YourSans-Regular.woff2") format("woff2"); }
+   @font-face { font-family: "Your Sans"; font-weight: 600; font-style: normal;
+                font-display: block; src: url("../fonts/YourSans-Semibold.woff2") format("woff2"); }
+   @font-face { font-family: "Your Sans"; font-weight: 700; font-style: normal;
+                font-display: block; src: url("../fonts/YourSans-Bold.woff2") format("woff2"); }
+
+   and keep provider "none" in the theme so decks render offline.
+   Font files are licensed; never commit them to a public repository.
+   ============================================================ */
+:root { --font-mono: ui-monospace; }

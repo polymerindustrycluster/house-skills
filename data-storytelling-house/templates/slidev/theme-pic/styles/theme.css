@@ -1,0 +1,261 @@
+/* ============================================================
+   theme.css — the house slide system for Slidev: seven sanctioned
+   slide types plus a chart layout, under the composition law
+   (design-starter/COMPOSITION.md; internally pic-design/COMPOSITION.md).
+
+   This file reads ONLY the template contract a brand pack generates
+   into tokens.css (scripts/assert_palette_matches_tokens.py in
+   pic-charts): --brand-<role>, --brand-<name>, --ink-NNN, --paper,
+   --font-sans, --font-display, and --font-mono from fonts.css.
+   It never names a brand colour, so one theme serves every pack.
+
+   Design space is 1920x1080 (canvasWidth: 1920), so every px value
+   below is the same px the reference template uses.
+
+   HARD RULES (carried from the PIC token law, true for any brand):
+     - never white text on the brand accent unless it passes AA;
+       white-text chips use --brand-action, the accent tuned for it
+     - dark surfaces use --brand-dark-surface only
+     - body ink = --ink-700; muted TEXT = --ink-650 (worst-case-AA stop)
+     - one accent per slide: --brand-highlight-fill is the rule colour;
+       supporting elements stay neutral (--ink-300)
+   ============================================================ */
+
+:root {
+  --slidev-theme-primary: var(--brand-action);
+}
+
+/* ---------- slide shell ---------- */
+.slidev-layout {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: var(--paper);
+  color: var(--ink-700);
+  font-family: var(--font-sans);
+  font-size: 28px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 { font-family: var(--font-display); color: var(--ink-900); margin: 0; }
+.slidev-layout p { margin: 0; }
+.slidev-layout a { border: none; color: var(--brand-action); }
+.slidev-layout strong, .slidev-layout b { font-weight: 700; color: var(--ink-900); }
+
+/* markdown defaults (layouts-base.css is not imported — see index.ts) */
+.slidev-layout ul, .slidev-layout ol { margin: 0; padding: 0; }
+.slidev-layout li { margin: 0; }
+.slidev-layout em { font-style: italic; }
+.slidev-layout code { font-family: var(--font-mono, ui-monospace), monospace; }
+
+/* dark surface — the dark-surface token only */
+.pic-dark { background: var(--brand-dark-surface); color: #fff; }
+.pic-dark h1, .pic-dark h2, .pic-dark h3, .pic-dark strong, .pic-dark b { color: #fff; }
+
+/* ---------- chrome ---------- */
+.pic-logo { position: absolute; top: 56px; left: 80px; height: 84px; }
+.pic-logo img { height: 100%; width: auto; display: block; }
+.pic-logo--sm { height: 62px; }
+
+.pic-footer {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 96px;
+  pointer-events: none; z-index: 20;
+}
+.pic-footer .pic-footer-label {
+  position: absolute; left: 80px; bottom: 44px;
+  font: 700 16px/1 var(--font-sans);
+  letter-spacing: .18em; text-transform: uppercase; color: var(--ink-650);
+}
+.pic-footer .pic-footer-page {
+  position: absolute; right: 80px; bottom: 40px;
+  font: 700 24px/1 var(--font-sans); letter-spacing: .04em; color: var(--brand-action);
+}
+.pic-footer.is-dark .pic-footer-label { color: rgba(255,255,255,.62); }
+.pic-footer.is-dark .pic-footer-page { color: var(--brand-highlight-fill); }
+
+/* ---------- type scale ---------- */
+.pic-eyebrow {
+  font: 700 22px/1 var(--font-sans);
+  letter-spacing: .18em; text-transform: uppercase; color: var(--brand-action);
+}
+.pic-dark .pic-eyebrow { color: var(--brand-highlight-fill); }
+
+.pic-title-xl { font: 600 120px/1.02 var(--font-display); letter-spacing: -.02em; color: var(--ink-900); }
+.pic-h1       { font: 600 84px/1.05 var(--font-display); letter-spacing: -.018em; color: var(--ink-900); }
+.pic-h2       { font: 600 48px/1.12 var(--font-display); letter-spacing: -.012em; color: var(--ink-900); }
+.pic-lead     { font: 500 40px/1.3 var(--font-display); color: var(--ink-700); }
+.pic-body     { font: 400 30px/1.5 var(--font-sans); color: var(--ink-700); }
+.pic-body-sm  { font: 400 24px/1.5 var(--font-sans); color: var(--ink-650); }
+.pic-note     { font: 400 22px/1.45 var(--font-sans); color: var(--ink-650); }
+.pic-dark .pic-body, .pic-dark .pic-lead { color: rgba(255,255,255,.92); }
+.pic-dark .pic-body-sm, .pic-dark .pic-note { color: rgba(255,255,255,.72); }
+
+.pic-rule { width: 108px; height: 8px; background: var(--brand-highlight-fill); border-radius: 4px; }
+
+/* ---------- title-slide swoosh (flat translucent blades) ----------
+   Two brand hues at reduced alpha. A pack without a secondary light hue
+   falls back to its accent; the blades stay decorative either way. */
+.pic-swoosh { position: absolute; bottom: 0; right: 0; width: 760px; height: 380px; pointer-events: none; overflow: hidden; }
+.pic-swoosh .blade { position: absolute; bottom: -50px; right: -50px; width: 1000px; height: 240px; transform: rotate(-12deg); transform-origin: bottom right; border-radius: 24px; }
+.pic-swoosh .b1 { background: color-mix(in srgb, var(--brand-light-blue, var(--brand-accent)) 55%, transparent); }
+.pic-swoosh .b2 { background: color-mix(in srgb, var(--brand-highlight-fill) 78%, transparent); bottom: -120px; right: -120px; height: 200px; }
+.pic-dark .pic-swoosh .b1 { background: color-mix(in srgb, var(--brand-light-blue, var(--brand-accent)) 22%, transparent); }
+.pic-dark .pic-swoosh .b2 { background: color-mix(in srgb, var(--brand-highlight-fill) 32%, transparent); }
+
+/* ============================================================
+   pic-title
+   ============================================================ */
+.pic-title-wrap { position: absolute; left: 80px; top: 196px; width: 1700px; }
+.pic-title-wrap .pic-eyebrow { display: block; margin-bottom: 26px; }
+.pic-title-wrap .pic-lead { margin-top: 34px; max-width: 1400px; }
+.pic-title-wrap .pic-rule { margin-top: 40px; }
+.pic-title-date { position: absolute; left: 80px; bottom: 258px; font: 700 30px/1 var(--font-sans); color: var(--brand-action); letter-spacing: .02em; }
+.pic-title-meta { position: absolute; left: 80px; bottom: 76px; max-width: 1000px; font: 400 22px/1.4 var(--font-sans); color: var(--ink-650); }
+
+/* ============================================================
+   pic-section (dark)
+   ============================================================ */
+.pic-section-band { position: absolute; left: 0; right: 0; bottom: 0; height: 260px; background: rgba(255,255,255,.07); }
+.pic-section-num {
+  position: absolute; left: 60px; top: 44%; transform: translateY(-50%);
+  font: 700 520px/0.85 var(--font-display); color: color-mix(in srgb, var(--brand-highlight-fill) 95%, transparent); letter-spacing: -.05em;
+}
+.pic-section-label { position: absolute; left: 760px; right: 80px; top: 44%; transform: translateY(-50%); }
+.pic-section-label h2 { font: 600 100px/1.04 var(--font-display); color: #fff; letter-spacing: -.02em; margin-top: 26px; }
+.pic-section-sub { margin-top: 34px; max-width: 980px; }
+
+/* ============================================================
+   pic-content
+   ============================================================ */
+.pic-hdr { position: absolute; left: 80px; right: 80px; top: 186px; }
+.pic-hdr .pic-eyebrow { display: block; margin-bottom: 20px; }
+.pic-hdr .pic-rule { margin-top: 34px; }
+.pic-content-body { position: absolute; left: 80px; right: 80px; top: 462px; bottom: 130px; }
+.pic-content-body > p:last-child { font-size: 24px; color: var(--ink-650); margin-top: 44px; }
+.pic-content-body.is-two-col { columns: 2; column-gap: 88px; }
+.pic-content-body p { font: 400 28px/1.5 var(--font-sans); color: var(--ink-700); margin: 0 0 26px; break-inside: avoid; }
+.pic-content-body ul { list-style: none; margin: 0; padding: 0; }
+.pic-content-body li {
+  font: 400 28px/1.45 var(--font-sans); color: var(--ink-700);
+  margin: 0 0 28px; padding-left: 34px; position: relative; break-inside: avoid;
+}
+.pic-content-body li::before {
+  content: ""; position: absolute; left: 0; top: 16px;
+  width: 14px; height: 14px; border-radius: 3px; background: var(--brand-highlight-fill);
+}
+.pic-content-body li strong { color: var(--ink-900); font-weight: 700; }
+
+/* is-lead — a short list (a SUM beat) scaled up to FILL the content zone rather than
+   floating in it. COMPOSITION.md: type scaled up to absorb slack is the FILL strategy. */
+.pic-content-body.is-lead { display: flex; flex-direction: column; justify-content: space-evenly; }
+.pic-content-body.is-lead li { font: 400 46px/1.32 var(--font-sans); margin: 0; padding-left: 52px; }
+.pic-content-body.is-lead li::before { top: 24px; width: 20px; height: 20px; }
+.pic-content-body.is-lead ul { display: flex; flex-direction: column; justify-content: space-evenly; height: 100%; }
+
+/* ============================================================
+   pic-two-up
+   ============================================================ */
+.pic-cols { position: absolute; left: 80px; right: 80px; top: 470px; bottom: 130px; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+.pic-col { border-top: 8px solid var(--brand-action); padding-top: 30px; }
+/* One accent per slide: the alternate column differs by ink weight, not a second brand hue. */
+.pic-col.is-alt { border-top-color: var(--ink-300); }
+.pic-col h3 { font: 700 20px/1 var(--font-sans); color: var(--brand-action); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 20px; }
+.pic-col.is-alt h3 { color: var(--ink-650); }
+.pic-col h4 { font: 600 46px/1.14 var(--font-display); color: var(--ink-900); margin: 0 0 22px; letter-spacing: -.01em; }
+.pic-col ul { list-style: none; margin: 0; padding: 0; }
+.pic-col li { font: 400 27px/1.5 var(--font-sans); color: var(--ink-700); margin: 0 0 16px; padding-left: 30px; position: relative; }
+.pic-col li::before { content: ""; position: absolute; left: 0; top: 15px; width: 12px; height: 12px; border-radius: 3px; background: var(--brand-highlight-fill); }
+.pic-col p { font: 400 27px/1.5 var(--font-sans); color: var(--ink-700); margin: 0 0 16px; }
+
+/* ============================================================
+   pic-quote
+   ============================================================ */
+.pic-quote-slide { background: var(--ink-50, var(--ink-100)); }
+.pic-quote-slide.pic-dark { background: var(--brand-dark-surface); }
+.pic-quote-mark {
+  position: absolute; left: 78px; top: 168px;
+  font: 700 300px/0.8 var(--font-display); color: var(--brand-highlight-fill);
+}
+.pic-quote-body { position: absolute; left: 380px; right: 80px; top: 236px; }
+.pic-quote-body p {
+  font: 600 120px/1.13 var(--font-display); color: var(--ink-900);
+  letter-spacing: -.018em; margin: 0;
+}
+.pic-dark .pic-quote-body p { color: #fff; }
+
+/* edge-to-edge bottom band — the anti-dead-band move */
+.pic-quote-band { position: absolute; left: 0; right: 0; bottom: 0; height: 300px; background: var(--ink-100); }
+/* A bare sound bite (no attribution, no restated line) has no band: the quote is centred and
+   scaled to own the canvas instead of floating above an empty strip. */
+.pic-quote-slide.is-bare .pic-quote-body { top: 50%; transform: translateY(-52%); }
+.pic-quote-slide.is-bare .pic-quote-mark { top: 50%; transform: translateY(-140%); }
+.pic-dark .pic-quote-band { background: rgba(255,255,255,.07); }
+.pic-quote-foot {
+  position: absolute; left: 380px; right: 80px; bottom: 0; height: 300px;
+  display: flex; flex-direction: column; justify-content: center; gap: 26px;
+}
+.pic-quote-attr { display: flex; align-items: stretch; gap: 26px; }
+.pic-quote-attr .who { font: 600 30px/1.3 var(--font-sans); color: var(--ink-900); }
+.pic-quote-attr .where { font: 400 24px/1.35 var(--font-sans); color: var(--ink-650); }
+.pic-dark .pic-quote-attr .who { color: #fff; }
+.pic-dark .pic-quote-attr .where { color: rgba(255,255,255,.72); }
+.pic-quote-attr .swatch { width: 8px; background: var(--brand-highlight-fill); border-radius: 4px; }
+.pic-quote-foot .pic-note { font: 400 26px/1.5 var(--font-sans); color: var(--ink-650); max-width: 1300px; }
+.pic-dark .pic-quote-foot .pic-note { color: rgba(255,255,255,.75); }
+
+/* ============================================================
+   pic-stat-grid
+   ============================================================ */
+.pic-stats { position: absolute; left: 80px; right: 80px; top: 448px; display: grid; grid-template-columns: 900px 1fr; gap: 68px; }
+.pic-stat-hero { border-top: 12px solid var(--brand-highlight-fill); padding-top: 34px; }
+.pic-stat-hero .v { font: 600 180px/1 var(--font-display); color: var(--ink-900); letter-spacing: -.03em; }
+.pic-stat-hero .v .u { font-size: 84px; color: var(--ink-650); font-weight: 500; margin-left: 8px; }
+.pic-stat-hero .l { font: 600 30px/1.3 var(--font-sans); color: var(--ink-700); margin-top: 26px; max-width: 720px; }
+.pic-stat-side { display: grid; grid-template-rows: 1fr 1fr; gap: 48px; }
+/* One accent per slide (COMPOSITION.md): the hero's rule is the accent; supporting stats stay neutral. */
+.pic-stat { border-top: 8px solid var(--ink-300); padding-top: 26px; }
+.pic-stat .v { font: 600 72px/1.05 var(--font-display); color: var(--ink-900); letter-spacing: -.02em; }
+.pic-stat .l { font: 500 26px/1.35 var(--font-sans); color: var(--ink-700); margin-top: 14px; max-width: 760px; }
+.pic-eyebrow-sm { font: 700 18px/1 var(--font-sans); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-650); display: block; margin-bottom: 16px; }
+.pic-stat-note { position: absolute; left: 80px; right: 80px; bottom: 128px; font: 400 24px/1.45 var(--font-sans); color: var(--ink-650); }
+
+/* ============================================================
+   pic-chart — the figure IS the slide
+   ============================================================ */
+.pic-chart-hdr { position: absolute; left: 80px; top: 44px; width: 1560px; }
+.pic-chart-hdr .pic-eyebrow { display: block; margin-bottom: 16px; }
+.pic-chart-hdr h1 { font: 600 62px/1.08 var(--font-display); letter-spacing: -.018em; color: var(--ink-900); }
+.pic-chart-logo { position: absolute; top: 46px; right: 80px; left: auto; height: 62px; }
+.pic-chart-panel {
+  position: absolute; left: 0; top: 236px; width: 1360px; bottom: 0;
+  background: var(--ink-50, var(--ink-100)); display: flex; align-items: center; justify-content: center;
+  padding: 32px 56px 60px 80px; box-sizing: border-box;
+}
+.pic-chart-panel img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
+.pic-chart-rail { position: absolute; left: 1392px; right: 80px; top: 250px; bottom: 118px; display: flex; flex-direction: column; justify-content: center; }
+.pic-chart-rail .pic-chart-read { font: 400 26px/1.45 var(--font-sans); color: var(--ink-700); }
+.pic-chart-rail .pic-chart-read p { margin: 0 0 26px; }
+.pic-chart-rail .pic-chart-read strong { color: var(--ink-900); font-weight: 700; }
+/* Neutral rule: the figure's highlight bar is the slide's one accent (COMPOSITION.md). */
+.pic-chart-apparatus { position: absolute; left: 0; right: 0; bottom: 0; border-top: 5px solid var(--ink-300); padding-top: 20px; }
+.pic-chart-apparatus .src { font: 400 18px/1.4 var(--font-sans); color: var(--ink-650); }
+.pic-chart-apparatus .lim { font: 400 18px/1.4 var(--font-sans); color: var(--ink-650); margin-top: 10px; }
+
+/* ============================================================
+   pic-thank-you (dark)
+   ============================================================ */
+.pic-ty-stack { position: absolute; left: 80px; right: 80px; top: 46%; transform: translateY(-50%); }
+.pic-ty-stack .ty { font: 600 230px/1 var(--font-display); color: #fff; letter-spacing: -.025em; margin: 0; }
+.pic-ty-stack .from { font: 500 46px/1.2 var(--font-display); color: var(--brand-highlight-fill); margin-top: 30px; }
+.pic-ty-links {
+  position: absolute; bottom: 76px; left: 80px; right: 80px;
+  display: flex; gap: 56px; flex-wrap: wrap; align-items: baseline;
+  font: 500 24px/1.2 var(--font-sans); color: rgba(255,255,255,.88);
+}
+.pic-ty-links .lbl { color: var(--brand-light-blue, var(--brand-highlight-fill)); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 16px; margin-right: 12px; }

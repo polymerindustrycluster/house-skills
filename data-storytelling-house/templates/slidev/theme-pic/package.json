@@ -1,0 +1,28 @@
+{
+  "name": "slidev-theme-pic",
+  "version": "1.0.0",
+  "description": "House slide system for Slidev: seven sanctioned slide types plus a chart layout under the composition law. Colours and fonts come from a brand pack's generated tokens.css and fonts.css; the mark from the deck's headmatter.",
+  "license": "MIT",
+  "keywords": [
+    "slidev-theme",
+    "slidev",
+    "pic"
+  ],
+  "engines": {
+    "slidev": ">=0.47.0"
+  },
+  "slidev": {
+    "defaults": {
+      "canvasWidth": 1920,
+      "aspectRatio": "16/9",
+      "fonts": {
+        "provider": "none",
+        "sans": "system-ui",
+        "serif": "system-ui",
+        "mono": "ui-monospace"
+      },
+      "transition": "fade"
+    },
+    "colorSchema": "light"
+  }
+}

@@ -11,15 +11,16 @@ even re-read.
 
 All checks apply PER THE DECLARED ROOM SHAPE (SKILL.md gate 1) — a working session
 is not failed for missing the STAR it was right not to have; a teach-back's learning
-objective satisfies the Big-Idea line at the *accurate and testable* bar. The list
-below is the pitch/ask default.
+objective satisfies the Big-Idea line at the *accurate and testable* bar. A scientific
+review uses its question, bounded finding, material methods, limits, and judgment;
+it has no mandatory sparkline, STAR, or bliss. The list below is the pitch/ask default.
 
 Against the working file (talk path):
 - Big Idea present, one sentence, arguable, stake named. A topic label fails. (A
   DOWNSHIFT briefing is exempt from *arguable* — its bar is *accurate*.)
-- Every beat card marked `IS` or `COULD`; in the middle — between the first `COULD`
-  and the `ASK` — no run of three same marks. The opening `IS` run and the closing
-  bliss are sustained by design and don't trip this.
+- Every beat card marked `IS` or `COULD`; a middle run of three same marks is
+  restructured or marked INTENTIONAL with its reason, per SKILL.md. The opening
+  `IS` run and closing bliss are sustained by design and don't trip this.
 - First `COULD` lands inside the opening 10% of the runtime, or inside the declared
   extended opening (never past the opening third); order at the end is `ASK`, then
   the optional `SUM` false ending (where Q&A opens), then `BLISS` — never end on the
@@ -40,9 +41,14 @@ Against the working file (talk path):
   tables, NUMBER GUARD rails, backup slides) are exempt — each appears where it
   works, traceable, and is not asked to be memorized.
 - If slides exist, two separate checks: (a) the glance test — step through each slide
-  giving it ~3 seconds; if its point hasn't landed, it fails; (b) one idea per slide —
-  at thumbnail size, any slide showing two competing focal points fails. A data slide
-  carries its observation in the title slot and a neutral chart title beneath.
+  giving it ~3 seconds; if the intended takeaway/focal point is not apparent, revise
+  it; unfamiliar mechanisms get their declared guided viewing time and the separate
+  comprehension check below; (b) one idea per slide —
+  at thumbnail size, any slide showing two competing focal points fails. Completed
+  assertion slides carry an observation headline and retain the chart's measurement
+  context. A declared question/evidence/reveal sequence may delay that headline;
+  it must reach a supported conclusion with limits. Preserve existing figure titles
+  and material qualifiers throughout.
 - If a leave-behind exists: it is a separate Slidedoc, and no cue in the script or
   speaker notes directs presenting it live. A deck and a Slidedoc sharing one file is
   a slideument wearing two lanyards.
@@ -50,14 +56,17 @@ Against the working file (talk path):
 Print variant (one-page ask, exec summary, Slidedoc): three acts present and joined
 by their conjunctions (Situation — but/and — Complication — so — Resolution); the
 DataPOV is the title; conclusion reachable without turning anything over; objections
-stated and rebutted; the abandoned alternative named; "This is true if…" assumptions
+answered where supported, otherwise retained as limits that may change the recommendation;
+the considered alternative and its disposition named; "This is true if…" assumptions
 listed; the three-number cap holds; sources footer present. Skip the sparkline,
 STAR, and slide checks.
 
 ## Layer 2 — Traceability audit (the boundary law, enforced)
 
 For every number in the artifact: name its governed source (evidence page, verified
-claim file, cited external). Three failure classes, in rising severity:
+claim file, cited external). Check its counted object, denominator, time period,
+and conditions in every shortened headline and sound bite: an event count does not
+establish the number of people or objects involved. Three failure classes, in rising severity:
 1. **Unsourced** — a number with no trace. Fix or cut.
 2. **Drifted** — traceable but restated loosely (departing from BOTH lines of the
    card's NUMBER GUARD, unit-shifted, "about" dropped from an estimate). A ROOM-SCALED
@@ -71,6 +80,12 @@ claim file, cited external). Three failure classes, in rising severity:
 Also in this layer: uncertainty verbs match the evidence tier of the source page (a
 screening estimate presented with certainty verbs is a bend), and any number the
 evidence lane has flagged contaminated/unverified is absent no matter how vivid.
+
+For scientific claims, also inspect nonnumeric meaning: mechanism versus observation,
+causal language, comparators, test conditions, independent units, scale and material
+uncertainty. Essential qualifications belong with the result. Use
+[scientific evidence review](scientific-evidence-review.md); review audience versions
+against their common claim record using [audience translation](audience-translation.md).
 
 ## Layer 3 — Cold listener (the only layer that can't be faked)
 
@@ -97,22 +112,33 @@ no sources, no working file, no conversation history, and NOT the questions belo
 and is asked for one unprompted deliverable: "you just heard this; write the 3–5
 things you'd tell a colleague tomorrow." A second pass (the builder may do this part)
 scores that report against the questions:
-1. What was the Big Idea, in your own words?
-2. Which numbers do you remember? (Score against the intended THREE.)
-3. What were you asked to do?
+1. What was the Big Idea, learning objective, or bounded review conclusion, in your own words?
+2. Which numbers do you remember? (Score only those selected for recall; none is valid.)
+3. What were you asked to do, learn, or judge? (An FYI briefing needs no invented ask.)
 4. What would you repeat to a colleague tomorrow?
 5. Where did you stop following?
 
 Scoring: Big Idea recall is pass/fail for the whole artifact. Verdict asymmetry for
 the subagent variant: a FAIL is a real, blocking FAIL (if even a reader who could
 re-read didn't surface the Big Idea, a listener has no chance); a PASS is capped at
-PASS-WITH-NOTES — only a human cold listener can convert it to a full PASS. Fewer
-than two of the three numbers back = the scaling or repetition failed, not the
-listener. An answer to
+PASS-WITH-NOTES — only a human cold listener can convert it to a full PASS. When
+three numbers were selected for recall, fewer than two back flags failed scaling
+or repetition. With fewer selected numbers, score those; never add numbers to make
+a learning artifact fit the rubric. An answer to
 Q4 that isn't one of the written sound bites means the room will quote something you
 didn't choose — find what they grabbed and either promote it or fix the beat that
 leaked it. Q5 stumbles route to the journalism lane's first-read taxonomy (undefined
 term, number-before-meaning, chart-speak…) — same disease, less forgiving medium.
+
+**Scientific comprehension is a separate result.** After collecting unprompted
+takeaways, ask the prewritten application or evidence-judgment question from the
+relevant scientific reference. Give neither sources nor the answer criteria to the
+listener. The builder scores the response against the source and the criteria set
+before rehearsal: the relationship, the conclusion-changing limit, and its use in
+the new case. Headline recall cannot compensate for a materially wrong inference.
+Record recall and comprehension separately. A comprehension failure blocks the
+scientific artifact until revised and checked; an AI pass remains PASS-WITH-NOTES
+and cannot establish human learning. If no comprehension test ran, record UNTESTED.
 
 ## Layer 4 — Hostile listener (the room's skeptic, embodied)
 
@@ -124,12 +150,16 @@ the rival program's champion). They hunt:
   objections unstated, the abandoned alternative unexplained, predictions with no
   "This is true if…" assumptions;
 - the effort-display beat wearing a story costume;
+- a necessary method, control, comparator, or limit cut as "too technical," or an
+  unresolved scientific objection rewritten as though it had been rebutted;
 - the number that would embarrass if checked against the evidence room live, on a
   phone, during the talk — assume someone will;
 - the STAR moment that manipulates rather than lands (manufactured emotion, stunt
   without a verified fact inside it);
 - the opposite case: could a competent skeptic argue the anti-Big-Idea from the same
-  three numbers? If yes, the talk must inoculate — Duarte's technique: enumerate every
+  evidence? If so, first test whether the recommendation must change. Rebut only
+  what the evidence answers; retain unresolved limits. For supported recommendations,
+  use Duarte's technique: enumerate every
   way the room might resist and state the opposing points before they can raise them
   (*Resonate* p. 86) — in a what-is beat, not hope. Sort the resistance by the *HBR
   Guide*'s three classes (logical / emotional / practical) and answer each in its own
@@ -138,8 +168,10 @@ the rival program's champion). They hunt:
 
 ## Layer 5 — Rehearsal reality (before a live room only)
 
-- Speak it once, timed, out loud. Duarte's fill rule: **plan content for about
-  two-thirds of the slot** (*Resonate* p. 176: given an hour, target forty minutes;
+- Speak it once, timed, out loud. Apply the declared room shape's timing: an
+  interruption-driven executive meeting plans roughly half the slot as formal
+  content (*DataStory* Ch.II); the ordinary-talk default is **about two-thirds**
+  (*Resonate* p. 176: given an hour, target forty minutes;
   the *HBR Guide* labels that same ratio "60%" — her arithmetic, the rule is
   leave-a-third-for-the-room) — rooms run late, discussion is the point, and asks get
   cut first when you overfill.
@@ -155,6 +187,13 @@ the rival program's champion). They hunt:
   including "thanks, questions?" — take questions, then RE-CLOSE with the line.
 
 ## Verdicts
+
+Make critique actionable: identify the specific slide or beat, the room's intended
+outcome, the feature observed, and why it helps or hurts that outcome. For a problem,
+propose a feasible revision when useful; distinguish evidence errors from context-dependent design
+preferences. This house review format applies Christiansen's goal-based critique
+discussion (*Building Science Graphics*, pp. 298–301 / PDF 323–326), which credits
+Conner and Irizarry's critique model; their book was not independently read here.
 
 PASS / PASS-WITH-NOTES / FAIL per layer; Layers 2 and 3 are blocking (a traceability
 bend or a failed Big-Idea recall ships nothing). Record the run — date, layer

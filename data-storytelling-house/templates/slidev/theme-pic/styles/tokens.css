@@ -1,0 +1,37 @@
+/* Generated from tokens.json by scripts/assert_palette_matches_tokens.py. Do not edit. */
+/* Template contract: roles first (--brand-accent, --brand-dark-surface, --brand-action, ...), */
+/* then brand colour names, the ink scale, the paper canvas and the font stacks. */
+:root {
+  --brand-accent: #1A8A9E;
+  --brand-highlight-fill: #B8D637;
+  --brand-alert: #E5673E;
+  --brand-research: #995480;
+  --brand-text: #585955;
+  --brand-context: #CDCFCA;
+  --brand-dark-surface: #0C6473;
+  --brand-action: #188295;
+  --brand-blue: #1A8A9E;
+  --brand-light-blue: #66D7DE;
+  --brand-green: #B8D637;
+  --brand-orange: #E5673E;
+  --brand-yellow: #FFAE3B;
+  --brand-purple: #995480;
+  --brand-charcoal: #585955;
+  --brand-light-gray: #E6E7E8;
+  --brand-blue-dark: #0C6473;
+  --brand-action-teal: #188295;
+  --brand-tech-hubs-navy: #193958;
+  --ink-900: #2B2C2A;
+  --ink-800: #404140;
+  --ink-700: #585955;
+  --ink-650: #656661;
+  --ink-600: #6D6E6A;
+  --ink-500: #888A85;
+  --ink-400: #A8AAA5;
+  --ink-300: #CDCFCA;
+  --ink-200: #E6E7E8;
+  --ink-100: #F1F2F0;
+  --paper: #FFFFFF;
+  --font-sans: "Aptos", "Aptos Display", system-ui, sans-serif;
+  --font-display: "Aptos Display", "Aptos", "Aptos Display", system-ui, sans-serif;
+}

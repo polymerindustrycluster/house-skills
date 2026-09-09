@@ -349,7 +349,11 @@ Methodology box present and scaled to consequence; sources named with exact filt
 data/code released to the extent consistent with privacy and licensing; corrections policy
 stated (dated, append-only, never silent). If the repo has publish gates, they pass. After
 shipping, name the piece's one concrete weakness to fix next — the first published version
-is a draft with standards.
+is a draft with standards. A **shareable cut** — the hero chart animated as a 10–20 s
+video (Remotion, `npx remotion render`) for distribution — is a derivative made AFTER
+ship from the published page's data, satisfying the interaction ladder's shareable-artifact
+job; it is never embedded in the article (scroll-first, iron rule 7), and it carries the
+same claim, source line and evidence-tier verbs as the chart it animates.
 
 ## Iron rules (the genre's failure modes, inverted)
 
@@ -401,7 +405,14 @@ charts rendered by inline JS from a `data/*.json` file embedded as a
 `<script type="application/json">` tag (or Observable Plot where a build exists), never
 SVG with hand-typed values; system-font fallback stacks; zero external dependencies.
 "Zero external dependencies" means at RUNTIME — Observable Plot or similar is allowed
-only where a build step inlines it into the page. The two-typeface rule holds on system
+only where a build step inlines it into the page. A Vega-Lite spec rendered to static
+SVG at BUILD time (`vl2svg spec.vl.json`, reading the same `data/*.json`) is one way to
+honour that same rule — not a second rule: no runtime JS at all, the values still come
+from the data file. Vega-Lite does NOT emit an SVG `<title>` element — verify and add the
+accessible title yourself, or iron rule 2's claim surface is missing. It is for the
+generic stack only; in the evidence-room repo the picviz recipes remain the only
+renderer, because that repo's gates walk picviz's SVG anatomy and nothing enforces that
+outside the repo. The two-typeface rule holds on system
 stacks — pair a system serif display face with the system sans workhorse (or vice versa
 per register); webfonts only where the house loads them. Embedded chart JSON is itself a
 data release: reduce it to the derived/aggregated values the data license permits and
