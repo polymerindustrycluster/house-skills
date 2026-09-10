@@ -5,14 +5,22 @@ organization's brand book into data a design system can consume
 programmatically — for chart palettes, slide themes, web tokens, and the
 brand card in this kit.
 
-**Merge behavior.** A pack is validated against a set of defaults. Dicts
-(objects) deep-merge over the defaults — you only need to specify the keys
-you're overriding. Lists replace the default outright — specifying any
-`categorical` list, for example, replaces the whole default list, not just
-appends to it. **A `null` value means "unfilled" and fails the pack check.**
-Do not leave a role null and assume a default silently covers it; either
-supply a real value or explicitly omit the key so the default deep-merge
-applies.
+**Merge behavior.** A pack is validated against a set of defaults. Most dicts
+(objects) deep-merge over the defaults, so you only specify the keys you are
+overriding: the ink scale, the surface roles and the type scale come for free.
+Two branches are the exception and REPLACE the defaults wholesale when you
+supply them: `brand` and `dataviz.tokens`. A brand is the pack's whole
+statement, not a patch on someone else's, so none of the default organization's
+colours survive into your palette or your generated views. Lists replace the
+default outright as well; specifying any `categorical` list, for example,
+replaces the whole default list rather than appending to it. **A `null` value
+anywhere, at any depth, including inside a list, means "unfilled" and fails
+the pack check by naming its path.** A value whose type disagrees with the
+default (a list where an object belongs) is refused the same way. Do not leave
+a role null and assume a default silently covers it; either supply a real
+value or omit the key so the default applies. If you replace `brand`, every
+name in `roles`, `categorical` and `accessible_lines` must be one of yours,
+and a dangling one is refused by role name at load.
 
 ## `schema_version`
 

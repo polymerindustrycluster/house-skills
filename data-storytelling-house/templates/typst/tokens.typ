@@ -1,6 +1,8 @@
 // Generated from tokens.json by scripts/assert_palette_matches_tokens.py. Do not edit.
 // Template contract for Typst forms: `tokens` is keyed by ROLE (accent, dark-surface, action, ...),
-// then by brand colour name, then ink-NNN and paper; `fonts` and `display-fonts` are family stacks;
+// then by brand colour name, then ink-NNN and paper. `fonts` and `display-fonts` are stacks of
+// INSTALLED families (typography.family + fallbacks); the CSS view's --font-sans is the browser
+// stack (typography.web_stack) and differs by medium on purpose.
 // `lockup-path` is the pack's first footer mark, relative to the pack (keep logos/ beside the forms).
 // Keys that are Typst keywords are quoted; read them with tokens.at("context").
 #let tokens = (
